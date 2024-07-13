@@ -42,6 +42,8 @@ export default {
           100: "#F1F1F1",
         },
 
+        white: "#FFFFFF",
+
         CabbagePont: {
           900: "#364127",
         },

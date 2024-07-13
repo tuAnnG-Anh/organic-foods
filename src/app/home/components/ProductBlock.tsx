@@ -196,7 +196,7 @@ export const ProductBlock = () => {
         <ButtonCustom className={"leading-4 uppercase"} title={"view all"} />
       </div>
       {/*list product*/}
-      <div className={"mt-10 grid grid-cols-6 gap-7.5 grid-rows-3"}>
+      <div className={"mt-10 px-5 grid grid-cols-6 gap-7.5 grid-rows-3"}>
         {map(products, (product, index) => {
           return <ProductCart key={index} product={product} />
         })}

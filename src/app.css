@@ -23,6 +23,7 @@
 body {
   margin: 0;
   scroll-behavior: smooth;
+  background-color: #FFFFFF;
 }
 ::-webkit-scrollbar {
   width: 8px;
@@ -63,7 +64,9 @@ body {
 }
 .shadow-2 {
   box-shadow: 0 4px 12px 0 #00000008;
-
+}
+.shadow-3{
+  box-shadow: 0 4px 25px 0 #00000026;
 }
 
 .shadow-1-transparent {
