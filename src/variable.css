@@ -1,8 +1,5 @@
 :root {
-  --primary: 249, 71, 27;
-  --primary-hover: 255, 93, 39;
-  --primary-active: 223, 55, 0;
-
-  /* màu bg của button dạng có viền */
-  --btn-outline-hover: 254, 237, 232;
+  --primary: 107, 178, 82;
+  --primary-hover: 107, 178, 82, 0.8;
+  --primary-active: 107, 178, 82, 0.6;
 }

@@ -1,11 +1,11 @@
 // theme/themeConfig.ts
-import type { ThemeConfig } from "antd";
+import type { ThemeConfig } from "antd"
 
 export const themeConfig: ThemeConfig = {
   token: {
-    colorPrimary: "#FF4000",
+    colorPrimary: "#6BB252",
     colorBgContainer: "#ffffff",
-    colorBorder: "#d9d9d9",
+    colorBorder: "#D3D3D3",
   },
   components: {
     Message: {
@@ -13,4 +13,4 @@ export const themeConfig: ThemeConfig = {
       colorText: "#FFFFFF",
     },
   },
-};
+}

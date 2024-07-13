@@ -11,6 +11,10 @@
   border-color: theme('borderColor.DEFAULT');
 }
 
+#root{
+  background: #FFFFFF;
+}
+
 ::before,
 ::after {
   --tw-content: '';
@@ -18,8 +22,7 @@
 
 body {
   margin: 0;
-  overscroll-behavior: none;
-  overflow: hidden;
+  scroll-behavior: smooth;
 }
 ::-webkit-scrollbar {
   width: 8px;
@@ -40,6 +43,31 @@ body {
 
 .no-scrollbar::-webkit-scrollbar {
   display: none;
+}
+
+
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.screen{
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.shadow-1 {
+  box-shadow: 0 6px 20px 0 #0000001A;
+}
+.shadow-2 {
+  box-shadow: 0 4px 12px 0 #00000008;
+
+}
+
+.shadow-1-transparent {
+  box-shadow: 0 6px 20px 0 transparent;
 }
 
 @layer base {

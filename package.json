@@ -10,12 +10,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@emotion/react": "^11.11.4",
+    "@emotion/css": "^11.11.2",
+    "@emotion/react": "^11.11.1",
+    "@emotion/server": "^11.11.0",
+    "@types/lodash": "^4.17.6",
+    "@types/react-slick": "^0.23.13",
     "antd": "^5.19.1",
     "clsx": "^2.1.1",
+    "lodash": "^4.17.21",
     "path": "^0.12.7",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-slick": "^0.30.2",
     "slick-carousel": "^1.8.1",
     "tailwind-merge": "^2.4.0"
   },
