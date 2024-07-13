@@ -20,11 +20,11 @@ export const ButtonCustom: FC<Props> = ({ title, icon, disabled, iconPlacement =
       className={classNames(
         "active:bg-primary",
         buttonSize === "large" && "px-10 h-15 text-lg",
-        buttonSize === "normal" && "px-5 h-11.5 text-base",
+        buttonSize === "normal" && "px-5 h-11.5 text-base rounded-[10px]",
         buttonSize === "small" && "px-[17.28px] h-11 text-base",
         buttonSize === "mini" && "px-[15px] h-9.5 rounded-[10px] text-xs",
         variant === "dark" && "active:bg-black-900 bg-black-800 text-white hover:bg-black-500",
-        disabled && "cursor-not-allowed opacity-50",
+        disabled && "cursor-not-allowed text-black-550 bg-black-100",
         className
       )}
       onClick={onClick}

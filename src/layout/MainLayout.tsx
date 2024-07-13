@@ -8,10 +8,10 @@ type Props = {
 
 export const MainLayout: FC<Props> = ({ children }) => {
   return (
-    <>
+    <div id={"main-layout"}>
       <Header />
       <div className={"content"}>{children}</div>
       <Footer />
-    </>
+    </div>
   )
 }

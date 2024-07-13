@@ -44,13 +44,13 @@ export const Banner = () => {
   return (
     <section id={"banner"} className={"relative"}>
       {/*Banner*/}
-      <img src={BANNER} alt={"Banner"} className={"w-full h-auto block"} />
+      <img src={BANNER} alt={"Banner"} width={1800} height={814} className={"w-full h-auto block"} />
 
       {/*content*/}
 
       <div className={"absolute w-[566px] flex gap-10 flex-col left-[271px] top-[122px]"}>
         <div className={"text-black-800 text-[69px]"}>
-          <span className={"text-primary font-bold"}>Orangic</span> Foods
+          <span className={"text-primary font-bold"}>Organic</span> Foods
           <br /> at your <span className={"font-bold"}>Doorstep</span>
         </div>
 

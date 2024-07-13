@@ -9,6 +9,14 @@ type Props = {
   title?: string
   childrenLength?: number
   responsive?: any
+  slidesToShow?: number
+  slidesToScroll?: number
+  header?: boolean
+  nextBtn?: ReactNode
+  prevBtn?: ReactNode
+  showButton?: boolean
+  classHeader?: string
+  onSeeAll?: () => void
 } & Settings
 export const SliderCustom: FC<Props> = ({
   children,
@@ -36,7 +44,15 @@ export const SliderCustom: FC<Props> = ({
       },
     },
   ],
+  slidesToScroll = 4,
+  slidesToShow = 8,
   childrenLength,
+  nextBtn,
+  header = true,
+  prevBtn,
+  showButton = true,
+  onSeeAll,
+  classHeader,
   ...otherOptions
 }) => {
   const sliderRef = useRef<any>(null)
@@ -58,10 +74,9 @@ export const SliderCustom: FC<Props> = ({
     ref: sliderRef,
     infinite: false,
     speed: 500,
-    slidesToShow: 8,
-    slidesToScroll: 6,
+    slidesToShow,
+    slidesToScroll,
     autoplay: false,
-    focusOnSelect: true,
     beforeChange: (_: number, next: number) => setCurrentSlide(next + 1),
     className: classNames("[&_.slick-slide]:p-0 [&_.slick-slide]:px-[15.5px] [&_.slick-list]:-mx-[15.5px] [&_.slick-list]:my-0"),
     responsive,
@@ -70,13 +85,25 @@ export const SliderCustom: FC<Props> = ({
 
   return (
     <div className="slider-container">
-      <div className={"mb-10 justify-between flex items-center"}>
-        <div className={"text-2xl leading-[38.73px] text-black-550 capitalize"}>{title}</div>
-        <div className={"flex gap-[13.85px]"}>
-          <ButtonCustom onClick={previous} buttonSize={"mini"} disabled={(currentSlide || 0) <= 1} icon={<i className="fa-solid fa-chevron-left"></i>} />
-          <ButtonCustom onClick={next} buttonSize={"mini"} disabled={(childrenLength || 0) - currentSlide < breakpointSlide} icon={<i className="fa-solid fa-chevron-right"></i>} />
+      {header && (
+        <div className={classNames("mb-[19px] justify-between flex items-center", classHeader)}>
+          <div className={"text-2xl leading-[38.73px] text-black-550 capitalize"}>{title}</div>
+          <div className={"flex items-center gap-12.5 cursor-pointer"}>
+            <div className={"text-black-325 flex items-center gap-[8.52px]   font-semibold leading-[21.79px] duration-200 hover:text-black-600"} onClick={onSeeAll}>
+              View All Categories <i className="fa-solid fa-right text-[8px]"></i>
+            </div>
+            {showButton && (
+              <div className={"flex gap-[13.85px]"}>
+                <div onClick={previous}>{prevBtn || <ButtonCustom buttonSize={"mini"} disabled={(currentSlide || 0) <= 1} icon={<i className="fa-solid fa-chevron-left"></i>} />}</div>
+                <div onClick={next}>
+                  {nextBtn || <ButtonCustom buttonSize={"mini"} disabled={(childrenLength || 0) - currentSlide < breakpointSlide} icon={<i className="fa-solid fa-chevron-right"></i>} />}
+                </div>
+              </div>
+            )}
+          </div>
         </div>
-      </div>
+      )}
+
       <Slider {...settings} centerPadding={"40px"}>
         {children}
       </Slider>

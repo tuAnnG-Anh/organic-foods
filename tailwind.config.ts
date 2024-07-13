@@ -14,6 +14,7 @@ export default {
   theme: {
     fontFamily: {
       roboto: ["Inter, system-ui, sans-serif"],
+      openSans: ["Open Sans, system-ui, sans-serif"],
     },
     container: {
       center: true,
@@ -32,9 +33,13 @@ export default {
           600: "#201F1F",
           550: "#222222",
           500: "#333333",
+          400: "#777777",
           350: "#747474",
+          325: "#787878",
           300: "#A5A5A5",
+          250: "#C2C2C2",
           200: "#E2E2E2",
+          100: "#F1F1F1",
         },
 
         CabbagePont: {
@@ -55,7 +60,7 @@ export default {
         base: ["16px", "24px"],
         lg: ["20px", "28px"],
         xl: ["24px", "32px"],
-        "2xl": ["32px", "40px"],
+        "2xl": ["32px", "38.73px"],
       },
     },
   },
