@@ -26,3 +26,7 @@ export const PRODUCT_THUMB_15 = "./images/product-thumb-15.png"
 export const PRODUCT_THUMB_16 = "./images/product-thumb-16.png"
 export const PRODUCT_THUMB_17 = "./images/product-thumb-17.png"
 export const PRODUCT_THUMB_18 = "./images/product-thumb-18.png"
+
+export const BANNER_1 = "./images/banner-ad-1.jpg"
+export const BANNER_2 = "./images/banner-ad-2.jpg"
+export const BANNER_3 = "./images/banner-ad-3.jpg"

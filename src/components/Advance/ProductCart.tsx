@@ -7,17 +7,18 @@ import { ButtonCustom } from "@/components/Basic/ButtonCustom.tsx"
 
 type Props = {
   product: TProduct
+  className?: string
 }
-export const ProductCart: FC<Props> = ({ product }) => {
+export const ProductCart: FC<Props> = ({ product, className }) => {
   const [hovered, setHovered] = useState(false)
   const [value, setValue] = useState(0)
 
   return (
-    <div className={"h-full relative"}>
+    <div className={classNames("h-full relative right-0", className)}>
       <div
         className={classNames(
-          "p-2.5 rounded-[20px] h-full gap-2.5 bg-white cursor-pointer flex flex-col items-center justify-between",
-          hovered && "absolute px-7.5 z-10 py-6.5 duration-200 -top-6.5 -left-7.5 -right-7.5 -bottom-6.5 shadow-3 h-[470px]"
+          "p-2.5 h-full gap-2.5 bg-white cursor-pointer flex flex-col items-center shadow-transparent justify-between",
+          hovered && "rounded-[20px] z-20 gap-10 duration-200 px-7.5 py-6.5 -translate-x-4 absolute top-0 shadow-3 h-fit"
         )}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
@@ -45,10 +46,15 @@ export const ProductCart: FC<Props> = ({ product }) => {
                 title={"ADD TO CART"}
                 buttonSize={"small"}
                 icon={<i className="fa-sharp fa-light fa-cart-plus"></i>}
-                className={"gap-2 rounded-[10px] group hover:text-primary flex-1 text-black-800 text-[13px]"}
+                className={"gap-2 rounded-[10px] duration-200 hover:text-primary flex-1 text-black-800 text-[13px]"}
                 variant={"outline"}
               />
-              <ButtonCustom buttonSize={"small"} icon={<i className="fa-light fa-heart"></i>} className={"-2 rounded-[10px] hover:text-primary text-black-800 text-[13px]"} variant={"outline"} />
+              <ButtonCustom
+                buttonSize={"small"}
+                icon={<i className="fa-light fa-heart"></i>}
+                className={"-2 rounded-[10px] duration-200 hover:text-primary text-black-800 text-[13px]"}
+                variant={"outline"}
+              />
             </div>
           )}
         </div>

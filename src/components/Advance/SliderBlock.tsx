@@ -17,6 +17,8 @@ type Props = {
   showButton?: boolean
   classHeader?: string
   onSeeAll?: () => void
+  viewAll?: boolean
+  className?: string
 } & Settings
 export const SliderCustom: FC<Props> = ({
   children,
@@ -53,6 +55,8 @@ export const SliderCustom: FC<Props> = ({
   showButton = true,
   onSeeAll,
   classHeader,
+  viewAll = true,
+  className,
   ...otherOptions
 }) => {
   const sliderRef = useRef<any>(null)
@@ -78,8 +82,9 @@ export const SliderCustom: FC<Props> = ({
     slidesToScroll,
     autoplay: false,
     beforeChange: (_: number, next: number) => setCurrentSlide(next + 1),
-    className: classNames("[&_.slick-slide]:p-0 [&_.slick-slide]:px-[15.5px] [&_.slick-list]:-mx-[15.5px] [&_.slick-list]:my-0"),
+    className: classNames("[&_.slick-slide]:p-0 [&._slick-track]:grid", className),
     responsive,
+    adaptiveHeight: false,
     ...otherOptions,
   }
 
@@ -89,9 +94,11 @@ export const SliderCustom: FC<Props> = ({
         <div className={classNames("mb-[19px] justify-between flex items-center", classHeader)}>
           <div className={"text-2xl leading-[38.73px] text-black-550 capitalize"}>{title}</div>
           <div className={"flex items-center gap-12.5 cursor-pointer"}>
-            <div className={"text-black-325 flex items-center gap-[8.52px]   font-semibold leading-[21.79px] duration-200 hover:text-black-600"} onClick={onSeeAll}>
-              View All Categories <i className="fa-solid fa-right text-[8px]"></i>
-            </div>
+            {viewAll && (
+              <div className={"text-black-325 flex items-center gap-[8.52px]   font-semibold leading-[21.79px] duration-200 hover:text-black-600"} onClick={onSeeAll}>
+                View All Categories <i className="fa-solid fa-right text-[8px]"></i>
+              </div>
+            )}
             {showButton && (
               <div className={"flex gap-[13.85px]"}>
                 <div onClick={previous}>{prevBtn || <ButtonCustom buttonSize={"mini"} disabled={(currentSlide || 0) <= 1} icon={<i className="fa-solid fa-chevron-left"></i>} />}</div>

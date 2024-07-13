@@ -48,15 +48,25 @@ body {
 
 
 .container {
-    max-width: 1600px;
+    max-width: 1720px;
     margin: 0 auto;
-    padding: 0;
+    overflow: hidden;
+    padding: 0 60px;
+}
+
+.slick-list{
+  overflow: inherit !important;
 }
 
 .screen{
   max-width: 1800px;
   margin: 0 auto;
   padding: 0;
+}
+
+.slick-track{
+  display: grid !important;
+  grid-auto-flow: column !important;
 }
 
 .shadow-1 {
@@ -67,6 +77,9 @@ body {
 }
 .shadow-3{
   box-shadow: 0 4px 25px 0 #00000026;
+}
+.shadow-3-transparent{
+  box-shadow: 0 4px 25px 0 transparent;
 }
 
 .shadow-1-transparent {

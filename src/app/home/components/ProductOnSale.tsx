@@ -1,5 +1,5 @@
-import { ButtonCustom } from "@/components/Basic/ButtonCustom.tsx"
-import { map } from "lodash"
+import { SliderCustom } from "@/components/Advance/SliderBlock.tsx"
+import { map, size } from "lodash"
 import {
   PRODUCT_THUMB_1,
   PRODUCT_THUMB_10,
@@ -20,8 +20,8 @@ import {
   PRODUCT_THUMB_8,
   PRODUCT_THUMB_9,
 } from "../../../../public"
-import { ProductCart } from "@/components/Advance/ProductCart.tsx"
 import { TProductList } from "@/types/product.ts"
+import { ProductCart } from "@/components/Advance/ProductCart.tsx"
 
 const products: TProductList = [
   {
@@ -188,19 +188,20 @@ const products: TProductList = [
   },
 ]
 
-export const ProductBlock = () => {
+export const ProductOnSale = () => {
   return (
-    <section id={"products"}>
-      <div className={"px-2.5 h-[106px] flex items-center justify-between"}>
-        <h2 className={"text-2xl text-black-550 capitalize font-normal"}>Freshly arrived</h2>
-        <ButtonCustom className={"leading-4 uppercase"} title={"view all"} />
-      </div>
-      {/*list product*/}
-      <div className={"mt-10 px-7 grid grid-cols-6 gap-7.5 grid-rows-3"}>
-        {map(products, (product, index) => {
-          return <ProductCart key={index} product={product} />
-        })}
-      </div>
-    </section>
+    <SliderCustom
+      slidesToScroll={4}
+      slidesToShow={6}
+      className={"z-29 [&_.slick-slide]:px-[15px] [&_.slick-slide]:!h-full [&_.slick-slide>div]:h-full [&_.slick-list]:-mx-[15px] [&_.slick-list]:my-0"}
+      title={"Products On Sale"}
+      childrenLength={size(products)}
+      viewAll={false}
+      classHeader={"mb-10"}
+    >
+      {map(products, (product, index) => {
+        return <ProductCart key={index} product={product} />
+      })}
+    </SliderCustom>
   )
 }

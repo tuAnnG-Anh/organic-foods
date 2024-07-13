@@ -25,7 +25,7 @@ export const ButtonCustom: FC<Props> = ({ title, icon, disabled, iconPlacement =
         buttonSize === "mini" && "px-[15px] h-9.5 rounded-[10px] text-xs",
         variant === "dark" && "active:bg-black-900 bg-black-800 text-white hover:bg-black-500",
         variant === "outline" && "active:border-primary hover:border-primary active:bg-white border-black-900 bg-white shadow-none text-black-550",
-        disabled && "cursor-not-allowed text-black-550 bg-black-100",
+        disabled && "cursor-not-allowed text-black-550 active:bg-black-100 bg-black-100",
         className
       )}
       onClick={onClick}

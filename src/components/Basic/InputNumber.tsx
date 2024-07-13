@@ -56,10 +56,11 @@ export const InputQuantity: FC<Props> = ({ className = "", value = 0, classGroup
           e.stopPropagation()
           !disabled && value > 0 && onDecrease()
         }}
-        className={`px-2 h-[26px] mr-[3px] rounded-md flex items-center justify-center border ${!disabled && value > 0 ? "cursor-pointer hover:text-primary hover:border-primary" : "cursor-not-allowed"} `}
+        className={`px-2 h-[26px] mr-[3px] rounded-md flex items-center justify-center border ${!disabled && value > 0 ? "cursor-pointer hover:text-primary duration-200 hover:border-primary" : "cursor-not-allowed"} `}
       >
         <i className={classNames("fa-regular text-[8px] fa-minus", (!disabled && value! > 0) || !disabled ? "" : "text-gray-300")}></i>
       </div>
+
       <InputNumber
         className={classNames("rounded-md shadow-none text-center w-[31px] h-[26px]", focus ? "border border-primary" : "", inputClassName, className)}
         disabled={disabled}
@@ -74,12 +75,13 @@ export const InputQuantity: FC<Props> = ({ className = "", value = 0, classGroup
         maxLength={1}
         {...props}
       />
+
       <div
         onClick={(e) => {
           e.stopPropagation()
           !disabled && value! < maxValue! && onIncrease()
         }}
-        className={`px-2 h-[26px] ml-[3px] rounded-md flex items-center justify-center border  ${!disabled && value! < maxValue! ? "cursor-pointer hover:text-primary hover:border-primary" : "cursor-not-allowed"}`}
+        className={`px-2 h-[26px] ml-[3px] rounded-md flex items-center justify-center border  ${!disabled && value! < maxValue! ? "cursor-pointer hover:text-primary duration-200 hover:border-primary" : "cursor-not-allowed"}`}
       >
         <i className={classNames("fa-regular fa-plus text-[8px]", !disabled && value! < maxValue! ? "" : "text-gray-300")}></i>
       </div>
