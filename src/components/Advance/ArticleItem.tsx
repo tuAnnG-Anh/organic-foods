@@ -10,7 +10,7 @@ export const ArticleItem: FC<Props> = ({ article }) => {
   return (
     <div className={"border flex flex-col"}>
       <div className={"overflow-hidden max-h-[240px]"}>
-        <img src={article.image} width={500} height={240} className={"w-full cursor-pointer duration-500 h-auto  hover:scale-110 block object-cover"} alt={article.title} />
+        <img src={article.image} width={500} height={240} className={"w-full cursor-pointer duration-500 h-auto block object-cover"} alt={article.title} />
       </div>
       <div className={"flex gap-2.5 p-7.5 items-start justify-end flex-1 flex-col"}>
         <div className={"flex items-center justify-center text-black-315"}>

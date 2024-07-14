@@ -104,12 +104,41 @@ const categories = [
 export const CategoryBlock = () => {
   return (
     <div className={"overflow-hidden"}>
-      <SliderCustom title={"Popular categories"} childrenLength={size(categories)} className={"[&_.slick-slide]:px-[15.5px] [&_.slick-list]:-mx-[15.5px] [&_.slick-list]:my-0"}>
+      <SliderCustom
+        slidesToScroll={4}
+        slidesToShow={8}
+        responsive={[
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 6,
+              slidesToScroll: 3,
+            },
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 5,
+              slidesToScroll: 2,
+            },
+          },
+          {
+            breakpoint: 640,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 1,
+            },
+          },
+        ]}
+        title={"Popular categories"}
+        childrenLength={size(categories)}
+        className={"[&_.slick-slide]:px-2 [&_.slick-list]:-mx-2 md:[&_.slick-slide]:px-[15.5px] md:[&_.slick-list]:-mx-[15.5px] [&_.slick-list]:my-0"}
+      >
         {map(categories, (category, index) => {
           return (
             <div key={index} className={"flex flex-col cursor-pointer"}>
-              <div className={"rounded-full overflow-hidden w-fit border-2 hover:border-primary border-transparent duration-500"}>
-                <img alt="" src={category.image} width={160} height={160} className={"hover:scale-110 object-cover duration-500"} />
+              <div className={"rounded-full overflow-hidden w-full border-2 hover:border-primary border-transparent duration-500"}>
+                <img alt="" src={category.image} width={160} height={160} className={"hover:scale-110 w-full h-full object-cover duration-500"} />
               </div>
               <div className="mt-[19px] text-center">{category.content}</div>
             </div>

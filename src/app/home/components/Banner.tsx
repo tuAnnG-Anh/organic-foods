@@ -44,11 +44,11 @@ export const Banner = () => {
   return (
     <section id={"banner"} className={"relative"}>
       {/*Banner*/}
-      <img src={BANNER} alt={"Banner"} width={1800} height={814} className={"w-full max-h-[814px] object-cover block"} />
+      <img src={BANNER} alt={"Banner"} width={1800} height={814} className={"w-full h-80 md:h-auto max-h-[814px] object-cover block"} />
 
       {/*content*/}
 
-      <div className={"absolute w-[566px] flex gap-10 flex-col left-[271px] top-[122px]"}>
+      <div className={" absolute w-[566px] flex gap-10 flex-col left-[271px] top-[122px]"}>
         <div className={"text-black-800 text-[69px]"}>
           <span className={"text-primary font-bold"}>Organic</span> Foods
           <br /> at your <span className={"font-bold"}>Doorstep</span>
@@ -72,7 +72,7 @@ export const Banner = () => {
       </div>
 
       {/*something*/}
-      <div className={"absolute text-white grid grid-cols-3 w-[1280px] bottom-0 left-1/2 -translate-x-1/2"}>
+      <div className={"md:absolute text-white grid grid-cols-1 md:grid-cols-3 w-full md:w-[1280px] bottom-0 left-1/2 md:-translate-x-1/2"}>
         {map(items, (item, index) => {
           return (
             <div key={index} className={"flex gap-5 p-5 items-start justify-center"} style={{ backgroundColor: item.bgColor }}>

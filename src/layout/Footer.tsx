@@ -203,7 +203,7 @@ export const Footer = () => {
           />
         </div>
       </div>
-      <div className={"border-t border-black-200 max-w-[1500px] mt-12.5 h-23.5 text-black-350 text-base leading-[34.24px] flex items-center justify-between"}>
+      <div className={"border-t border-black-200 flex-col sm:flex-row max-w-[1500px] mt-12.5 sm:h-23.5 text-black-350 text-base leading-[34.24px] flex items-center justify-between"}>
         <div>© 2024 Organic. All rights reserved.</div>
         <div className={""}>
           Copy by <span className={"text-black-400 font-bold"}>tuAnnG-Anh</span>

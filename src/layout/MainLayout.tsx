@@ -8,7 +8,7 @@ type Props = {
 
 export const MainLayout: FC<Props> = ({ children }) => {
   return (
-    <div id={"main-layout"}>
+    <div id={"main-layout"} className={"relative"}>
       <Header />
       <div className={"content"}>{children}</div>
       <Footer />

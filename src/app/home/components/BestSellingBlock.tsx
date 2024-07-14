@@ -192,12 +192,12 @@ export const BestSellingBlock = () => {
   return (
     <SliderCustom
       slidesToScroll={4}
-      className={"z-30 [&_.slick-slide]:px-[15px] [&_.slick-slide]:!h-full [&_.slick-slide>div]:h-full [&_.slick-list]:-mx-[15px] [&_.slick-list]:my-0"}
+      className={"z-[2] [&_.slick-slide]:px-[15px] [&_.slick-slide]:!h-full [&_.slick-slide>div]:h-full [&_.slick-list]:-mx-[15px] [&_.slick-list]:my-0"}
       slidesToShow={6}
       title={"Best Selling Products"}
       childrenLength={size(products)}
       viewAll={false}
-      classHeader={"mb-10"}
+      classHeader={"mb-5 md:mb-10"}
     >
       {map(products, (product, index) => {
         return <ProductCart className={"h-full"} key={index} product={product} />

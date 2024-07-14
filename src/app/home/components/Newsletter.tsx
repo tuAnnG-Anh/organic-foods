@@ -12,13 +12,13 @@ export const Newsletter = () => {
       }}
       className={"w-full h-[325px] flex justify-center items-center"}
     >
-      <div className={"flex gap-17.5 "}>
+      <div className={"flex gap-17.5 md:flex-row flex-col"}>
         <div className={"max-w-[450px] text-white flex flex-col justify-between"}>
           <div className={"text-[38px] leading-10 font-medium capitalize"}>Get 20% discount on your first purchase</div>
           <div className={"text-[19px] leading-10"}>Just Sign Up & Register it now to become member.</div>
         </div>
 
-        <div className={"flex flex-col justify-between w-[523px] gap-3.5"}>
+        <div className={"flex flex-col justify-between md:w-[523px] gap-3.5"}>
           <Input
             allowClear
             type="email"

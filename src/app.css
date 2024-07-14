@@ -55,7 +55,6 @@ body {
     max-width: 1660px;
     margin: 0 auto;
     overflow: hidden;
-    padding: 0 30px;
 }
 
 .slick-list{
@@ -88,6 +87,10 @@ body {
 
 .shadow-1-transparent {
   box-shadow: 0 6px 20px 0 transparent;
+}
+
+.border-sidebar{
+  @apply w-[296pxpx] h-[43pxpx] gap-2.5 opacity-[0px] px-2.5 py-0 border-b-[#3333334D] border-b border-dashed border-0 border-[1px_0px];
 }
 
 @layer base {

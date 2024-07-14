@@ -35,11 +35,11 @@ export const ArticleBlock = () => {
   return (
     <section id={"article"}>
       <div className={"flex items-center justify-between"}>
-        <h2 className={"m-0 text-2xl text-black-550 capitalize font-normal"}>our latest articles</h2>
-        <ButtonCustom className={"leading-4 uppercase"} textClassName={"uppercase"} title={"view aLL"} />
+        <h2 className={"m-0 text-xl md:text-2xl text-black-550 capitalize font-normal"}>our latest articles</h2>
+        <ButtonCustom className={"leading-4 uppercase px-3 md:px-5"} textClassName={"uppercase"} title={"view aLL"} />
       </div>
       {/*list product*/}
-      <div className={"mt-5 grid grid-cols-3 gap-13"}>
+      <div className={"mt-5 grid md:grid-cols-2 lg:grid-cols-3 gap-13"}>
         {map(articles, (article, index) => {
           return <ArticleItem key={index} article={article} />
         })}

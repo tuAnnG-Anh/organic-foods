@@ -191,12 +191,12 @@ const products: TProductList = [
 export const ProductBlock = () => {
   return (
     <section id={"products"}>
-      <div className={"px-2.5 h-[106px] flex items-center justify-between"}>
-        <h2 className={"text-2xl text-black-550 capitalize font-normal"}>Freshly arrived</h2>
-        <ButtonCustom className={"leading-4 uppercase"} textClassName={"uppercase"} title={"view all"} />
+      <div className={"md:px-2.5 md:h-[106px] flex items-center justify-between"}>
+        <h2 className={"text-xl md:text-2xl m-0 text-black-550 capitalize font-normal"}>Freshly arrived</h2>
+        <ButtonCustom className={"leading-4 px-3 md:px-5 uppercase"} textClassName={"uppercase"} title={"view all"} />
       </div>
       {/*list product*/}
-      <div className={"mt-10 px-7 grid grid-cols-6 gap-7.5 grid-rows-3"}>
+      <div className={"md:mt-10 mt-5 md:px-7 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 md:gap-7.5 grid-rows-3"}>
         {map(products, (product, index) => {
           return <ProductCart key={index} product={product} />
         })}
