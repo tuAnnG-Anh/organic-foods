@@ -16,6 +16,9 @@ export default {
       roboto: ["Inter, system-ui, sans-serif"],
       openSans: ["Open Sans, system-ui, sans-serif"],
     },
+    placeholderColor: {
+      "black-550": "#222222",
+    },
     container: {
       center: true,
       padding: "0",
@@ -39,7 +42,9 @@ export default {
           325: "#787878",
           315: "#828282",
           300: "#A5A5A5",
+          275: "#C8C8C8",
           250: "#C2C2C2",
+          225: "#D2D2D2",
           200: "#E2E2E2",
           100: "#F1F1F1",
         },

@@ -1,5 +1,5 @@
 import { ButtonCustom } from "@/components/Basic/ButtonCustom.tsx"
-import { ArticleItem } from "@/app/home/components/ArticleItem.tsx"
+import { ArticleItem } from "@/components/Advance/ArticleItem.tsx"
 import { map } from "lodash"
 import { TArticle } from "@/types/artcile.ts"
 import { POST_THUMB_1, POST_THUMB_2, POST_THUMB_3 } from "../../../../public"
