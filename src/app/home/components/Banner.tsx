@@ -44,7 +44,7 @@ export const Banner = () => {
   return (
     <section id={"banner"} className={"relative"}>
       {/*Banner*/}
-      <img src={BANNER} alt={"Banner"} width={1800} height={814} className={"w-full h-auto block"} />
+      <img src={BANNER} alt={"Banner"} width={1800} height={814} className={"w-full max-h-[814px] object-cover block"} />
 
       {/*content*/}
 

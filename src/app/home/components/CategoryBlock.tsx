@@ -109,7 +109,7 @@ export const CategoryBlock = () => {
           return (
             <div key={index} className={"flex flex-col cursor-pointer"}>
               <div className={"rounded-full overflow-hidden w-fit border-2 hover:border-primary border-transparent duration-500"}>
-                <img alt="" src={category.image} width={160} height={160} className={"hover:scale-110 duration-500"} />
+                <img alt="" src={category.image} width={160} height={160} className={"hover:scale-110 object-cover duration-500"} />
               </div>
               <div className="mt-[19px] text-center">{category.content}</div>
             </div>

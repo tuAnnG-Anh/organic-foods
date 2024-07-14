@@ -193,7 +193,7 @@ export const ProductOnSale = () => {
     <SliderCustom
       slidesToScroll={4}
       slidesToShow={6}
-      className={"z-29 [&_.slick-slide]:px-[15px] [&_.slick-slide]:!h-full [&_.slick-slide>div]:h-full [&_.slick-list]:-mx-[15px] [&_.slick-list]:my-0"}
+      className={"z-[29] [&_.slick-slide]:px-[15px] [&_.slick-slide]:!h-full [&_.slick-slide>div]:h-full [&_.slick-list]:-mx-[15px] [&_.slick-list]:my-0"}
       title={"Products On Sale"}
       childrenLength={size(products)}
       viewAll={false}

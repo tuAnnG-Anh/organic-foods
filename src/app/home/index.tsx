@@ -5,6 +5,8 @@ import { BannerPromote } from "@/app/home/components/BannerPromote.tsx"
 import { BestSellingBlock } from "@/app/home/components/BestSellingBlock.tsx"
 import { ProductOnSale } from "@/app/home/components/ProductOnSale.tsx"
 import { ArticleBlock } from "@/app/home/components/ArticleBlock.tsx"
+import { Newsletter } from "@/app/home/components/Newsletter.tsx"
+import { PromoteApp } from "@/app/home/components/PromoteApp.tsx"
 
 export const Home = () => {
   return (
@@ -17,6 +19,8 @@ export const Home = () => {
         <BestSellingBlock />
         <ProductOnSale />
         <ArticleBlock />
+        <Newsletter />
+        <PromoteApp />
       </div>
     </div>
   )

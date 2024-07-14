@@ -193,7 +193,7 @@ export const ProductBlock = () => {
     <section id={"products"}>
       <div className={"px-2.5 h-[106px] flex items-center justify-between"}>
         <h2 className={"text-2xl text-black-550 capitalize font-normal"}>Freshly arrived</h2>
-        <ButtonCustom className={"leading-4 uppercase"} title={"view all"} />
+        <ButtonCustom className={"leading-4 uppercase"} textClassName={"uppercase"} title={"view all"} />
       </div>
       {/*list product*/}
       <div className={"mt-10 px-7 grid grid-cols-6 gap-7.5 grid-rows-3"}>

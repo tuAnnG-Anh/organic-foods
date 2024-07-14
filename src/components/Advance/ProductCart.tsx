@@ -18,13 +18,13 @@ export const ProductCart: FC<Props> = ({ product, className }) => {
       <div
         className={classNames(
           "p-2.5 h-full gap-2.5 bg-white cursor-pointer flex flex-col items-center shadow-transparent justify-between",
-          hovered && "rounded-[20px] z-20 gap-10 duration-200 px-7.5 py-6.5 -translate-x-4 absolute top-0 shadow-3 h-fit"
+          hovered && "rounded-[20px] z-50 gap-10 duration-200 px-7.5 py-6.5 -translate-x-4 absolute top-0 shadow-3 h-fit"
         )}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
       >
         <div className={"w-full flex items-center justify-center"}>
-          <img src={product.image} alt={product.name} className={"block max-w-full max-h-[210px]"} />
+          <img src={product.image} alt={product.name} height={230} className={"block max-w-full object-cover max-h-[210px]"} />
         </div>
         <div className={"flex w-full flex-col gap-[5px] items-center justify-end text-black-500"}>
           <div>{product.name}</div>
