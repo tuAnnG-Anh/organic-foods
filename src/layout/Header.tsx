@@ -57,7 +57,6 @@ export const Header = () => {
   const [openMobileMenu, setOpenMobileMenu] = useState(false)
   const [fixed, setFixed] = useState(false)
 
-  console.log("fixed", fixed)
   return (
     <Affix offsetTop={0} onChange={(value) => setFixed(!!value)}>
       <section id={"header"} className={"screen bg-white z-[99999]"}>
@@ -111,11 +110,11 @@ export const Header = () => {
                 <div
                   key={category.id}
                   className={classNames(
-                    "px-5 relative cursor-pointer w-[83px] after:contents-[''] flex items-center justify-center h-[47px] hover:after:block after:hidden after:absolute after:left-0 after:right-0 after:bg-CabbagePont-900 after:h-[3px] after:-bottom-[18.5px]",
+                    "px-5 relative cursor-pointer w-[83px] after:contents-[''] flex items-center justify-center h-[47px] group after:hidden after:absolute after:left-0 after:right-0 after:bg-CabbagePont-900 after:h-[3px] after:-bottom-[18.5px]",
                     category.active && "after:block"
                   )}
                 >
-                  <a href={category.link} className={"uppercase text-black-900 font-medium text-sm no-underline"}>
+                  <a href={category.link} className={"uppercase text-black-900 font-medium group-hover:text-primary text-sm no-underline"}>
                     {category.title}
                   </a>
                 </div>

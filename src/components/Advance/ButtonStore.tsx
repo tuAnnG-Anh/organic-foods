@@ -7,7 +7,7 @@ const Google = () => {
     <ButtonCustom
       className={"h-fit md:!px-0  border-none"}
       title={
-        <div className="flex  h-15 px-[15px] bg-black-900 text-white rounded-[7px] items-center justify-center cursor-pointer">
+        <div className="flex h-15 px-[15px] bg-black-900 text-white rounded-[7px] items-center justify-center cursor-pointer">
           <div className="mr-3">
             <svg viewBox="30 336.7 120.9 129.2" width="35">
               <path fill="#FFD400" d="M119.2,421.2c15.3-8.4,27-14.8,28-15.3c3.2-1.7,6.5-6.2,0-9.7  c-2.1-1.1-13.4-7.3-28-15.3l-20.1,20.2L119.2,421.2z" />

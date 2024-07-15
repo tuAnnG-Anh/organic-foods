@@ -27,14 +27,14 @@ export const PRODUCT_THUMB_16 = "./images/product-thumb-16.png"
 export const PRODUCT_THUMB_17 = "./images/product-thumb-17.png"
 export const PRODUCT_THUMB_18 = "./images/product-thumb-18.png"
 
-export const BANNER_1 = "./images/fruit-1.jpg"
-export const BANNER_2 = "./images/fruit-2.jpg"
-export const BANNER_3 = "./images/fruit-3.jpg"
+export const BANNER_1 = "./images/banner-1.jpeg"
+export const BANNER_2 = "./images/banner-2.png"
+export const BANNER_3 = "./images/banner-3.png"
 
 export const POST_THUMB_1 = "./images/post-thumbnail-1.jpg"
 export const POST_THUMB_2 = "./images/post-thumbnail-2.jpg"
 export const POST_THUMB_3 = "./images/post-thumbnail-3.jpg"
 
-export const BANNER_NEWS_LETTER = "./images/banner-1600.jpg"
+export const BANNER_NEWS_LETTER = "./images/banner-newsletter.jpeg"
 
 export const BANNER_APP = "./images/banner-onlineapp.png"
