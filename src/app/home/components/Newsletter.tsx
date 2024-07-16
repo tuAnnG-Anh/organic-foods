@@ -10,7 +10,7 @@ export const Newsletter = () => {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
-      className={"w-full h-[325px] flex justify-center items-center"}
+      className={"w-full mt-4 md:mt-0 h-[325px] flex justify-center items-center"}
     >
       <div className={"flex gap-17.5 md:flex-row flex-col"}>
         <div className={"max-w-[450px] text-white flex flex-col justify-between"}>

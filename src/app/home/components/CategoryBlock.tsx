@@ -103,7 +103,7 @@ const categories = [
 
 export const CategoryBlock = () => {
   return (
-    <div className={"overflow-hidden"}>
+    <div className={"overflow-hidden mt-4 md:mt-0"}>
       <SliderCustom
         slidesToScroll={4}
         slidesToShow={8}

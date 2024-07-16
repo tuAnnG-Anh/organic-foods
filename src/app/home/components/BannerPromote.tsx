@@ -3,18 +3,18 @@ import { BANNER_1, BANNER_2, BANNER_3 } from "../../../../public"
 
 export const BannerPromote = () => {
   return (
-    <div className={"grid grid-cols-[900px_minmax(0px,_1fr)] grid-rows-2 gap-7.5 h-[640px] py-10"}>
+    <div className={"grid grid-cols-1 2xl:grid-cols-[900px_minmax(0px,_1fr)] sm:grid-rows-2 sm:grid-cols-2 gap-4 md:gap-7.5 h-[640px] py-4 md:py-10"}>
       <div
-        className={"row-span-2 w-full h-full flex items-center px-10"}
+        className={"sm:row-span-1 sm:col-span-2 lg:row-span-2 lg:col-span-1 w-full h-full flex items-center px-10"}
         style={{
           backgroundImage: `url(${BANNER_1})`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className={"flex flex-col gap-2.5 text-white"}>
-          <div className={"uppercase font-semibold text-[40px] leading-14 "}>Items On Sale</div>
-          <div className={"text-xl leading-7"}>Discounts up to 30%</div>
+        <div className={"flex flex-col md:gap-2.5 text-white"}>
+          <div className={"text-xl uppercase font-semibold md:text-[40px] md:leading-14 "}>Items On Sale</div>
+          <div className={"md:text-xl leading-7"}>Discounts up to 30%</div>
           <ButtonCustom
             variant={"link"}
             type={"link"}
@@ -26,16 +26,16 @@ export const BannerPromote = () => {
       </div>
 
       <div
-        className={"w-full h-full flex items-center px-10"}
+        className={"w-full h-full col-span-1 sm:col-span-1 lg:row-span-1 lg:col-span-1 row-span-1 flex items-center px-10"}
         style={{
           backgroundImage: `url(${BANNER_2})`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className={"flex flex-col gap-2.5 text-white"}>
-          <div className={"uppercase font-semibold text-[40px] leading-14 "}>Items On Sale</div>
-          <div className={"text-xl leading-7"}>Discounts up to 30%</div>
+        <div className={"flex flex-col md:gap-2.5 text-white"}>
+          <div className={"text-xl uppercase font-semibold md:text-[40px] md:leading-14 "}>Items On Sale</div>
+          <div className={"md:text-xl leading-7"}>Discounts up to 30%</div>
           <ButtonCustom
             variant={"link"}
             type={"link"}
@@ -47,16 +47,16 @@ export const BannerPromote = () => {
       </div>
 
       <div
-        className={"w-full h-full flex items-center px-10"}
+        className={"w-full h-full flex items-center px-10 sm:col-span-1 lg:row-span-1 lg:col-span-1"}
         style={{
           backgroundImage: `url(${BANNER_3})`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className={"flex flex-col gap-2.5 text-white"}>
-          <div className={"uppercase font-semibold text-[40px] leading-14 "}>Items On Sale</div>
-          <div className={"text-xl leading-7"}>Discounts up to 30%</div>
+        <div className={"flex flex-col md:gap-2.5 text-white"}>
+          <div className={"text-xl uppercase font-semibold md:text-[40px] md:leading-14 "}>Items On Sale</div>
+          <div className={"md:text-xl leading-7"}>Discounts up to 30%</div>
           <ButtonCustom
             variant={"link"}
             type={"link"}

@@ -22,7 +22,7 @@ const categories = [
 
 export const ListCategory = () => {
   return (
-    <section id={"listCategory"} className={"my-2.5"}>
+    <section id={"listCategory"} className={"mt-4 md:my-2.5"}>
       <h2 className={"text-xl md:text-2xl text-black-550 leading-[38px] capitalize m-0 font-normal"}>People are also looking for</h2>
       {!isEmpty(categories) && (
         <div className={"flex gap-3 md:gap-[15px] flex-wrap mt-4 md:mt-5"}>

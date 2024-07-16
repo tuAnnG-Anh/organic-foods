@@ -3,7 +3,7 @@ import { BANNER_APP } from "../../../../public"
 
 export const PromoteApp = () => {
   return (
-    <div className={"bg-green-200 h-[531px] flex items-end relative"}>
+    <div className={"bg-green-200 mt-4 md:mt-0 h-[531px] flex items-end relative"}>
       <div className={"w-[1225px] grid grid-cols-2 items-center mx-auto"}>
         <div className={"flex flex-col gap-5 h-fit "}>
           <div className={"capitalize text-black-550 text-2xl"}>Download Organic App</div>

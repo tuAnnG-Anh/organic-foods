@@ -129,7 +129,7 @@ export const Footer = () => {
 
   return (
     <section id={"footer"} className={"container"}>
-      <div className={"flex items-start justify-between flex-1 pt-15"}>
+      <div className={"flex items-start justify-between flex-1 pt-4 md:pt-15"}>
         <div>
           <img alt={""} src={LOGO_WITH_TEXT} width={300} height={71} className={"w-[300px] max-h-[375px] object-cover block mb-3.5"} />
           <div className={"flex gap-[13.12px] mx-[43px] "}>

@@ -38,7 +38,7 @@ const services: TService[] = [
 export const Services = () => {
   return (
     <section id={"service"}>
-      <div className={"grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 grid-rows-1 gap-5"}>
+      <div className={"grid mt-4 md:mt-0 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 grid-rows-1 gap-5"}>
         {map(services, (service) => {
           return <ServiceItem key={service.id} service={service} />
         })}

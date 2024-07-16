@@ -14,7 +14,7 @@ export const Home = () => {
   return (
     <div className="screen">
       <Banner />
-      <div className={"container px-5 md:px-7.5 grid grid-cols-1 gap-10 my-10"}>
+      <div className={"container px-4 md:px-7.5 grid grid-cols-1 gap-4 md:gap-10 my-4 md:my-10"}>
         <CategoryBlock />
         <ProductBlock />
         <BannerPromote />

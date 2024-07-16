@@ -34,7 +34,7 @@ const articles: TArticle[] = [
 export const ArticleBlock = () => {
   return (
     <section id={"article"}>
-      <div className={"flex items-center justify-between"}>
+      <div className={"flex mt-4 md:mt-0 items-center justify-between"}>
         <h2 className={"m-0 text-xl md:text-2xl text-black-550 capitalize font-normal"}>our latest articles</h2>
         <ButtonCustom className={"leading-4 uppercase px-3 md:px-5"} textClassName={"uppercase"} title={"view aLL"} />
       </div>

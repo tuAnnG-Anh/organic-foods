@@ -191,7 +191,7 @@ const products: TProductList = [
 export const ProductOnSale = () => {
   return (
     <SliderCustom
-      className={"z-[1] [&_.slick-slide]:px-[15px] [&_.slick-slide]:!h-full [&_.slick-slide>div]:h-full [&_.slick-list]:-mx-[15px] [&_.slick-list]:my-0"}
+      className={"z-[1] mt-4 md:mt-0 [&_.slick-slide]:px-[15px] [&_.slick-slide]:!h-full [&_.slick-slide>div]:h-full [&_.slick-list]:-mx-[15px] [&_.slick-list]:my-0"}
       title={"Products On Sale"}
       childrenLength={size(products)}
       viewAll={false}

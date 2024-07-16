@@ -105,7 +105,7 @@ export const SliderCustom: FC<Props> = ({
   return (
     <div className="slider-container">
       {header && (
-        <div className={classNames("mb-[19px] justify-between flex items-center", classHeader)}>
+        <div className={classNames("mb-4 md:mb-[19px] justify-between flex items-center", classHeader)}>
           <div className={"md:text-2xl text-xl leading-[38.73px] text-black-550 capitalize"}>{title}</div>
           <div className={"flex items-center gap-12.5 cursor-pointer"}>
             {viewAll && (
