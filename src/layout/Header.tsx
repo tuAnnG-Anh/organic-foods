@@ -54,21 +54,22 @@ const cart = [
 export const Header = () => {
   const [openSidebar, setOpenSidebar] = useState(false)
   const [openMobileMenu, setOpenMobileMenu] = useState(false)
+  const [categoryActive, setCategoryActive] = useState(0)
 
   return (
     <div>
       <section id={"header"} className={"screen bg-white"}>
         <div className={"fixed top-0 z-50 right-0 left-0 "}>
-          <div className={classNames("bg-white pl-5 py-3 md:py-[18.5px] flex justify-between items-center shadow-sm")}>
+          <div className={classNames("bg-white w-full pl-4 xl:pl-5 py-3 md:py-[18.5px] flex justify-between items-center shadow-sm")}>
             {/*Logo and menu*/}
             <div className={"flex items-center flex-row-reverse md:flex-row justify-between w-1/2 md:w-auto"}>
               <img src={LOGO_SMALL} alt="logo" className={"translate-x-1/2 md:translate-x-0 w-[43.41px] h-[34.41px]"} />
-              <div className={"ml-[5px] hidden md:block text-[40px] font-medium leading-10"}>Organic</div>
+              <div className={"ml-[5px] hidden lg:block text-[40px] font-medium leading-10"}>Organic</div>
               <div onClick={() => setOpenMobileMenu(!openMobileMenu)}>
                 {!openMobileMenu ? <i className="fa-solid fa-bars text-lg duration-200 cursor-pointerc block md:hidden"></i> : <i className="fa-light fa-xmark text-[20px]"></i>}
               </div>
 
-              <i className="fa-solid fa-bars text-lg duration-200 cursor-pointer hover:text-primary md:block ml-5 hidden" onClick={() => setOpenSidebar(true)}></i>
+              <i className="fa-solid fa-bars text-lg duration-200 cursor-pointer hover:text-primary xl:block ml-5 hidden" onClick={() => setOpenSidebar(true)}></i>
             </div>
 
             {/*Search bar*/}
@@ -78,9 +79,8 @@ export const Header = () => {
               enterButton="Search"
               type="email"
               className={classNames(
-                "hidden md:block",
+                "hidden xl:block lg:w-100 2xl:w-[500px]",
                 css({
-                  width: "500px",
                   ".ant-input-affix-wrapper": {
                     borderWidth: "1px",
                     height: "52px",
@@ -103,15 +103,13 @@ export const Header = () => {
             />
 
             {/*Categories*/}
-            <div className={"items-center justify-center hidden md:flex"}>
-              {map(categories, (category) => {
+            <div className={"items-center relative justify-center hidden md:flex"}>
+              {map(categories, (category, index) => {
                 return (
                   <div
                     key={category.id}
-                    className={classNames(
-                      "px-5 relative cursor-pointer w-[83px] after:contents-[''] flex items-center justify-center h-[47px] group after:hidden after:absolute after:left-0 after:right-0 after:bg-CabbagePont-900 after:h-[3px] after:-bottom-[18.5px]",
-                      category.active && "after:block"
-                    )}
+                    className={classNames("px-5 relative cursor-pointer w-[83px] flex items-center justify-center h-[47px] group  after:-bottom-[18.5px]", index && "after:block")}
+                    onClick={() => setCategoryActive(index)}
                   >
                     <a href={category.link} className={"uppercase text-black-900 font-medium group-hover:text-primary text-sm no-underline"}>
                       {category.title}
@@ -119,6 +117,13 @@ export const Header = () => {
                   </div>
                 )
               })}
+              <div
+                className={"absolute bg-CabbagePont-900 ease-out duration-500 h-[3px] w-1/5"}
+                style={{
+                  left: `${categoryActive * 20}%`,
+                  bottom: "-18.5px",
+                }}
+              ></div>
             </div>
 
             {/*Cart and user*/}
@@ -126,7 +131,7 @@ export const Header = () => {
             <div className={"flex items-center justify-center"}>
               {map(cart, (c) => {
                 return (
-                  <div key={c.id} className={classNames("px-5 cursor-pointer", c.id !== "user" && "hidden")}>
+                  <div key={c.id} className={classNames("px-4 xl:px-5 cursor-pointer", c.id !== "user" && "hidden")}>
                     <div className={"text-black-900 md:hover:text-primary"}>{c.icon}</div>
                   </div>
                 )
@@ -135,7 +140,7 @@ export const Header = () => {
           </div>
 
           <Sidebar open={openSidebar} onCancel={() => setOpenSidebar(false)} />
-          <div className={classNames("hidden bg-white  sm:hidden", openMobileMenu && "block")} id="mobile-menu">
+          <div className={classNames("hidden bg-white", openMobileMenu && "block")} id="mobile-menu">
             <div className="space-y-1 px-2 pb-3 pt-2">
               {map(categories, (category) => {
                 return (

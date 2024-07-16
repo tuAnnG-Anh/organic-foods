@@ -5,7 +5,7 @@ import { ButtonCustom } from "@/components/Basic/ButtonCustom.tsx"
 const Google = () => {
   return (
     <ButtonCustom
-      className={"h-fit md:!px-0  border-none"}
+      className={"h-fit p-0 px-0 border-none"}
       title={
         <div className="flex h-15 px-[15px] bg-black-900 text-white rounded-[7px] items-center justify-center cursor-pointer">
           <div className="mr-3">
@@ -85,7 +85,7 @@ const AppStore = () => {
     )
   }
 
-  return <ButtonCustom className={"h-fit md:!px-0 border-none"} title={renderContent()} />
+  return <ButtonCustom className={"h-fit p-0 px-0 border-none"} title={renderContent()} />
 }
 
 export default {

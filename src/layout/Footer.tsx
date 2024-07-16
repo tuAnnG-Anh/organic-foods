@@ -128,15 +128,16 @@ export const Footer = () => {
   const [hovered, setHovered] = useState<number | null>(null)
 
   return (
-    <section id={"footer"} className={"container"}>
-      <div className={"flex items-start justify-between flex-1 pt-4 md:pt-15"}>
-        <div>
+    <section id={"footer"} className={"container px-4 md:px-7.5 xl:mx-0"}>
+      <div className={"flex flex-wrap xl:flex-nowrap gap-8 items-start justify-between flex-1 pt-4 md:pt-15"}>
+        <div className={"flex-1 xl:flex-"}>
           <img alt={""} src={LOGO_WITH_TEXT} width={300} height={71} className={"w-[300px] max-h-[375px] object-cover block mb-3.5"} />
           <div className={"flex gap-[13.12px] mx-[43px] "}>
             {map(socials, (item, index) => {
               return (
                 <a
                   href={item.link}
+                  target={"_blank"}
                   key={index}
                   onMouseEnter={() => setHovered(index)}
                   onMouseLeave={() => setHovered(null)}
@@ -153,7 +154,7 @@ export const Footer = () => {
         </div>
         {map(itemsFooter, (item, index) => {
           return (
-            <div key={index} className={"flex flex-col gap-[19px] "}>
+            <div key={index} className={"w-full flex flex-col gap-4 xl:gap-[19px] "}>
               <div className={"text-lg font-semibold text-black-550 capitalize"}>{item.title}</div>
               <div className={"flex flex-col"}>
                 {map(item.list, (list, index) => {
@@ -168,7 +169,7 @@ export const Footer = () => {
           )
         })}
 
-        <div className={"flex flex-col gap-[29px] max-w-[330px]"}>
+        <div className={"flex flex-col gap-4 md:gap-[29px] md:max-w-[330px] w-full"}>
           <div className={"text-lg font-semibold text-black-550 capitalize"}>Our Newsletter</div>
 
           <div className={"text-black-350 text-base leading-[34.24px]"}>Subscribe to our newsletter to get updates about our grand offers.</div>
@@ -203,7 +204,7 @@ export const Footer = () => {
           />
         </div>
       </div>
-      <div className={"border-t border-black-200 flex-col sm:flex-row max-w-[1500px] mt-12.5 sm:h-23.5 text-black-350 text-base leading-[34.24px] flex items-center justify-between"}>
+      <div className={"py-2 sm:py-0 border-t border-black-200 flex-col sm:flex-row max-w-[1500px] mt-12.5 sm:h-23.5 text-black-350 text-base leading-[34.24px] flex items-center justify-between"}>
         <div>© 2024 Organic. All rights reserved.</div>
         <div className={""}>
           Copy by <span className={"text-black-400 font-bold"}>tuAnnG-Anh</span>
