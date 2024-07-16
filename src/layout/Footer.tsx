@@ -128,7 +128,7 @@ export const Footer = () => {
   const [hovered, setHovered] = useState<number | null>(null)
 
   return (
-    <section id={"footer"} className={"container px-4 md:px-7.5 xl:mx-0"}>
+    <section id={"footer"} className={"container px-4 md:px-7.5 "}>
       <div className={"flex flex-wrap xl:flex-nowrap gap-8 items-start justify-between flex-1 pt-4 md:pt-15"}>
         <div className={"flex-1 xl:flex-"}>
           <img alt={""} src={LOGO_WITH_TEXT} width={300} height={71} className={"w-[300px] max-h-[375px] object-cover block mb-3.5"} />

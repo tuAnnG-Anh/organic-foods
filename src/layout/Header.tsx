@@ -65,7 +65,7 @@ export const Header = () => {
             <div className={"flex items-center flex-row-reverse md:flex-row justify-between w-1/2 md:w-auto"}>
               <img src={LOGO_SMALL} alt="logo" className={"translate-x-1/2 md:translate-x-0 w-[43.41px] h-[34.41px]"} />
               <div className={"ml-[5px] hidden lg:block text-[40px] font-medium leading-10"}>Organic</div>
-              <div onClick={() => setOpenMobileMenu(!openMobileMenu)}>
+              <div className={"md:hidden"} onClick={() => setOpenMobileMenu(!openMobileMenu)}>
                 {!openMobileMenu ? <i className="fa-solid fa-bars text-lg duration-200 cursor-pointerc block md:hidden"></i> : <i className="fa-light fa-xmark text-[20px]"></i>}
               </div>
 
@@ -131,7 +131,7 @@ export const Header = () => {
             <div className={"flex items-center justify-center"}>
               {map(cart, (c) => {
                 return (
-                  <div key={c.id} className={classNames("px-4 xl:px-5 cursor-pointer", c.id !== "user" && "hidden")}>
+                  <div key={c.id} className={classNames("px-4 xl:px-5 cursor-pointer", c.id !== "user" && "hidden lg:block")}>
                     <div className={"text-black-900 md:hover:text-primary"}>{c.icon}</div>
                   </div>
                 )
@@ -140,7 +140,7 @@ export const Header = () => {
           </div>
 
           <Sidebar open={openSidebar} onCancel={() => setOpenSidebar(false)} />
-          <div className={classNames("hidden bg-white", openMobileMenu && "block")} id="mobile-menu">
+          <div className={classNames("hidden md:hidden bg-white", openMobileMenu && "block")} id="mobile-menu">
             <div className="space-y-1 px-2 pb-3 pt-2">
               {map(categories, (category) => {
                 return (

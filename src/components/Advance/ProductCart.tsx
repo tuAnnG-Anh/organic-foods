@@ -15,10 +15,9 @@ export const ProductCart: FC<Props> = ({ product, className }) => {
   return (
     <div className={classNames("h-full relative right-0", className)}>
       <div
-        className={classNames(
-          "p-2.5 h-full gap-2.5 bg-white cursor-pointer flex flex-col items-center shadow-transparent  justify-between"
-          // hovered && "rounded-[20px] z-[1] gap-10 duration-200 px-7.5 py-6.5 -translate-x-4 absolute top-0 shadow-3 h-fit"
-        )}
+        className={
+          "p-2.5 xl:hover:rounded-[20px] xl:hover:-translate-y-6.5 xl:hover:top-0 xl:hover:z-[1] xl:hover:gap-10 h-full gap-2.5 xl:hover:h-fit xl:hover:px-7.5 xl:hover:py-6.5 xl:hover:-translate-x-4 xl:hover:duration-200 group xl:hover:absolute xl:hover:shadow-[0_4px_25px_0_#00000026] bg-white cursor-pointer flex flex-col items-center shadow-transparent  justify-between"
+        }
       >
         <div className={"w-full flex items-center justify-center"}>
           <img src={product.image} alt={product.name} height={230} className={"block max-w-full object-cover max-h-[210px]"} />
@@ -36,8 +35,8 @@ export const ProductCart: FC<Props> = ({ product, className }) => {
             <Rate allowHalf defaultValue={product.rate} disabled className={"text-[13px] leading-5 grid grid-cols-5 w-25 justify-items-center [&_.ant-rate-star]:m-0 "} />
             <div className={"text-black-300 font-semibold text-[15px]"}>({product.reviews})</div>
           </div>
-          <InputQuantity classGroup={"mt-[15px]"} setValue={(value) => setValue(value as number)} maxValue={10} value={value} />
-          <div className={"mt-5 flex gap-2 w-full"}>
+          <InputQuantity classGroup={"flex xl:hidden group-hover:flex mt-[15px]"} setValue={(value) => setValue(value as number)} maxValue={10} value={value} />
+          <div className={"flex xl:hidden mt-5 group-hover:flex gap-2 w-full"}>
             <ButtonCustom
               title={"ADD TO CART"}
               buttonSize={"small"}

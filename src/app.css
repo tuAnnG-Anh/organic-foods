@@ -74,16 +74,20 @@ body {
   display: grid !important;
   grid-auto-flow: column !important;
 }
-
+.shadow-3 {
+  @apply shadow-[0_4px_25px_0_#00000026];
+}
 .shadow-1 {
   box-shadow: 0 6px 20px 0 #0000001A;
 }
 .shadow-2 {
   box-shadow: 0 4px 12px 0 #00000008;
 }
+
 .shadow-3{
   box-shadow: 0 4px 25px 0 #00000026;
 }
+
 .shadow-3-transparent{
   box-shadow: 0 4px 25px 0 transparent;
 }

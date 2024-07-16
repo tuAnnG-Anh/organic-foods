@@ -13,12 +13,12 @@ export const Newsletter = () => {
       className={"w-full mt-4 px-4 lg:px-0 md:mt-0 h-[325px] flex justify-center items-center"}
     >
       <div className={"flex lg:gap-17.5 h-full justify-evenly lg:justify-between lg:flex-row flex-col"}>
-        <div className={"max-w-[450px] mb-4 lg:mb-0 text-white flex flex-col items-center text-center lg:text-start lg:justify-center"}>
-          <div className={"text-lg md:text-[38px] md:leading-10 font-medium capitalize"}>Get 20% discount on your first purchase</div>
-          <div className={"text-[19px] md:leading-10"}>Just Sign Up & Register it now to become member.</div>
+        <div className={"max-w-[450px] mb-4 sm:mb-0 text-white flex flex-col items-center text-center lg:text-start lg:justify-center"}>
+          <div className={"text-xl md:text-2xl xl:text-[38px] md:leading-10 font-medium capitalize"}>Get 20% discount on your first purchase</div>
+          <div className={"text-[19px] md:leading-8 xl:leading-10"}>Just Sign Up & Register it now to become member.</div>
         </div>
 
-        <div className={"flex flex-col justify-between lg:w-[523px] gap-3.5"}>
+        <div className={"flex flex-col justify-between lg:justify-center lg:w-[523px] gap-3.5"}>
           <Input
             allowClear
             type="email"

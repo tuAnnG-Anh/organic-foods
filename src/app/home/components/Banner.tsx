@@ -62,7 +62,7 @@ export const Banner = () => {
         <div className={"lg:py-5 gap-4 md:gap-5 flex flex-wrap items-center"}>
           {map(process, (item, index) => {
             return (
-              <div key={index} className={"text-black-900 flex items-center gap-2.5 max-w-[165px] uppercase"}>
+              <div key={index} className={"text-black-900 flex items-center gap-2.5 max-w-[170px] uppercase"}>
                 <div className={"font-bold text-lg lg:text-2xl leading-[38.4px]"}>{formatNumber(item.count)}</div>
                 <div className={"text-sm leading-[16.8px]"}>{item.content}</div>
               </div>
