@@ -130,7 +130,7 @@ export const Footer = () => {
   return (
     <section id={"footer"} className={"container px-4 md:px-7.5 "}>
       <div className={"flex flex-wrap xl:flex-nowrap gap-8 items-start justify-between flex-1 pt-4 md:pt-15"}>
-        <div className={"flex-1 xl:flex-"}>
+        <div className={"w-fit"}>
           <img alt={""} src={LOGO_WITH_TEXT} width={300} height={71} className={"w-[300px] max-h-[375px] object-cover block mb-3.5"} />
           <div className={"flex gap-[13.12px] mx-[43px] "}>
             {map(socials, (item, index) => {
@@ -152,56 +152,58 @@ export const Footer = () => {
             })}
           </div>
         </div>
-        {map(itemsFooter, (item, index) => {
-          return (
-            <div key={index} className={"w-full flex flex-col gap-4 xl:gap-[19px] "}>
-              <div className={"text-lg font-semibold text-black-550 capitalize"}>{item.title}</div>
-              <div className={"flex flex-col"}>
-                {map(item.list, (list, index) => {
-                  return (
-                    <a href={list.link} key={index} className={"text-black-350 no-underline cursor-pointer duration-200 leading-[34.24px] text-base hover:text-black-550"}>
-                      {list.title}
-                    </a>
-                  )
-                })}
+        <div className={"w-full grid sm:grid-cols-2 lg:grid-cols-4"}>
+          {map(itemsFooter, (item, index) => {
+            return (
+              <div key={index} className={"flex flex-col gap-4 xl:gap-[19px] "}>
+                <div className={"text-lg font-semibold text-black-550 capitalize"}>{item.title}</div>
+                <div className={"flex flex-col"}>
+                  {map(item.list, (list, index) => {
+                    return (
+                      <a href={list.link} key={index} className={"text-black-350 no-underline cursor-pointer duration-200 leading-[34.24px] text-base hover:text-black-550"}>
+                        {list.title}
+                      </a>
+                    )
+                  })}
+                </div>
               </div>
-            </div>
-          )
-        })}
+            )
+          })}
 
-        <div className={"flex flex-col gap-4 md:gap-[29px] md:max-w-[330px] w-full"}>
-          <div className={"text-lg font-semibold text-black-550 capitalize"}>Our Newsletter</div>
+          <div className={"flex flex-col gap-4 md:gap-[29px] lg:max-w-[330px] w-full"}>
+            <div className={"text-lg font-semibold text-black-550 capitalize"}>Our Newsletter</div>
 
-          <div className={"text-black-350 text-base leading-[34.24px]"}>Subscribe to our newsletter to get updates about our grand offers.</div>
+            <div className={"text-black-350 text-base leading-[34.24px]"}>Subscribe to our newsletter to get updates about our grand offers.</div>
 
-          <Search
-            placeholder="Enter your email-address"
-            allowClear
-            type="email"
-            id="email"
-            enterButton="SEND"
-            className={classNames(
-              css({
-                ".ant-input-affix-wrapper": {
-                  borderWidth: "1px",
-                  height: "47px",
-                  fontSize: "15px",
-                  padding: "13.5px 15px",
-                  borderStartStartRadius: "10px !important",
-                  backgroundColor: "#F1F1F1",
-                  borderEndStartRadius: "10px !important",
-                },
-                ".ant-input-search-button": {
-                  height: "47px",
-                  fontSize: "14px",
-                  textTransform: "uppercase",
-                  borderStartEndRadius: "10px !important",
-                  borderEndEndRadius: "10px !important",
-                  padding: "15px 17px",
-                },
-              })
-            )}
-          />
+            <Search
+              placeholder="Enter your email-address"
+              allowClear
+              type="email"
+              id="email"
+              enterButton="SEND"
+              className={classNames(
+                css({
+                  ".ant-input-affix-wrapper": {
+                    borderWidth: "1px",
+                    height: "47px",
+                    fontSize: "15px",
+                    padding: "13.5px 15px",
+                    borderStartStartRadius: "10px !important",
+                    backgroundColor: "#F1F1F1",
+                    borderEndStartRadius: "10px !important",
+                  },
+                  ".ant-input-search-button": {
+                    height: "47px",
+                    fontSize: "14px",
+                    textTransform: "uppercase",
+                    borderStartEndRadius: "10px !important",
+                    borderEndEndRadius: "10px !important",
+                    padding: "15px 17px",
+                  },
+                })
+              )}
+            />
+          </div>
         </div>
       </div>
       <div className={"py-2 sm:py-0 border-t border-black-200 flex-col sm:flex-row max-w-[1500px] mt-12.5 sm:h-23.5 text-black-350 text-base leading-[34.24px] flex items-center justify-between"}>

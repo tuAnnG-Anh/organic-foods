@@ -1,6 +1,6 @@
 import { Button } from "antd"
 import { FC, ReactNode, useEffect, useState } from "react"
-import { BaseButtonProps } from "antd/es/button/button"
+import { BaseButtonProps, ButtonProps } from "antd/es/button/button"
 import { classNames } from "@/util/Common.ts"
 type Props = BaseButtonProps & {
   title?: any
@@ -12,7 +12,8 @@ type Props = BaseButtonProps & {
   iconPlacement?: "left" | "right"
   textClassName?: string
   disabled?: boolean
-}
+} & Omit<ButtonProps, "type" | "size" | "onClick" | "icon" | "title" | "className" | "disabled">
+
 export const ButtonCustom: FC<Props> = ({ title, icon, disabled, iconPlacement = "left", textClassName, onClick, className, buttonSize = "normal", variant = "primary", ...props }) => {
   const [type, setType] = useState<"primary" | "default" | "dashed" | "link" | "text" | undefined>("primary")
   useEffect(() => {
